@@ -83,6 +83,36 @@ body.open {
 }
 
 /* ------------------------------------
+ * Content Title
+ * ------------------------------------ */
+h2.content-title,
+h2.main-head-title {
+  margin-bottom: 1%;
+  font-size: 23px;
+  color: #1d1c2e;
+  overflow: hidden;
+  line-height: 2;
+}
+
+h2.content-title span {
+  position: relative;
+  display: block;
+  margin-left: 32px;
+}
+
+h2.content-title span::before {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 20px;
+  top: 50%;
+  left: -30px;
+  margin-top: -11px;
+  background: url("../images/icon_crown.png") no-repeat;
+  background-size: contain;
+}
+
+/* ------------------------------------
  * Forms
  * ------------------------------------ */
 .mw-5 {

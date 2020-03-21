@@ -39,12 +39,6 @@ body.open {
   border-right: solid 1px #ececec;
 }
 
-.inner-wrap.flex-container aside {
-  width: 28%;
-  background: #f6f6f6;
-  line-height: 1.4;
-}
-
 .inner-wrap .inner {
   padding: 0;
 }
@@ -81,6 +75,18 @@ body.open {
   .inner-wrap .inner {
     padding: 0 5%;
   }
+}
+
+.center-align {
+  float: none;
+  margin: 0 auto;
+}
+
+/* ------------------------------------
+ * Forms
+ * ------------------------------------ */
+.mw-5 {
+  max-width: 500px;
 }
 
 /* ------------------------------------
@@ -363,4 +369,53 @@ header h1 span.logo {
   #nav-menu li a {
     font-size: 20px;
   }
+}
+
+/* ------------------------------------
+ * Hover Button
+ * ------------------------------------ */
+
+.hover-button {
+  border-radius: 2rem;
+  background-color: transparent;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 0.5rem 5rem;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.hover-button:hover::before {
+  margin-left: 0;
+}
+
+.hover-button span {
+  position: relative;
+  z-index: 1;
+}
+
+.hover-button::before {
+  content: '';
+  height: 100%;
+  width: 200%;
+  margin-left: -100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background: linear-gradient(to right, #3366cc, #2b82d0, #adc2eb, #2b82d0, #3366cc);
+  filter: contrast(150%);
+  transition: 0.3s
+}
+
+div.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

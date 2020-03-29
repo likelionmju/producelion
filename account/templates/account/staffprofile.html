@@ -14,9 +14,9 @@
 <body>
     <form enctype="multipart/form-data" action="{%url 'saveprofile'%}" method="POST">
         {% csrf_token %}
-        <input type="File" name = "image" onchange="checkSize(this)">
-        <input type="text" name = "name">
-        <input type="text" name = "management"><br>
+        <input type="File" name = "image" onchange="checkSize(this)"><br>
+        팀이름<input type="text" name = "name"><br>
+        팀소개<input type="text" name = "management"><br>
         <select name="team">
             <option value="">==팀 선택==</option>
             <option value="A">== A ==</option>

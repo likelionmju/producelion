@@ -16,19 +16,19 @@
         {% csrf_token %}
         A<br>
         {%for vote in votes.all %}
-        {%if vote.team == "Ateam"%}
+        {%if vote.user == "Ateam"%}
         {{vote.myname}}
         {%endif%}
         {%endfor%}
         <br>B<br>
         {%for vote in votes.all %}
-        {%if vote.team == "Bteam"%}
+        {%if vote.user == "Bteam"%}
         {{vote.myname}}
         {%endif%}
         {%endfor%}
         <br>C<br>
         {%for vote in votes.all %}
-        {%if vote.team == "Cteam"%}
+        {%if vote.user == "Cteam"%}
         {{vote.myname}}
         {%endif%}
         {%endfor%}

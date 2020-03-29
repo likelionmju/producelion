@@ -24,6 +24,7 @@ urlpatterns = [
     path('', page.views.home, name='home'),
     path('account/', include('account.urls')),
     path('vote/', include('vote.urls')),
+    path('result/',include('result.urls')),
 ] 
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

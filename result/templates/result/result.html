@@ -16,25 +16,26 @@
         {% csrf_token %}
         A<br>
         {%for vote in votes.all %}
-        {%if vote.user == "Ateam"%}
+        {%if vote.team == "Ateam"%}
         {{vote.myname}}
         {%endif%}
         {%endfor%}
         <br>B<br>
         {%for vote in votes.all %}
-        {%if vote.user == "Bteam"%}
+        {%if vote.team == "Bteam"%}
         {{vote.myname}}
         {%endif%}
         {%endfor%}
         <br>C<br>
         {%for vote in votes.all %}
-        {%if vote.user == "Cteam"%}
+        {%if vote.team == "Cteam"%}
         {{vote.myname}}
         {%endif%}
         {%endfor%}
         <br>
         <input type="submit" value="home">
     </form>
+    
 </body>
 </html>
 {% endblock %}

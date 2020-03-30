@@ -11,8 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script>
+    function check(){
+        alert("적용되었습니다.");
+    }
+</script>
 <body>
-    <form action="{%url 'home'%}" method="POST">
+    <form action="{%url 'beforeteam'%}" method="POST" onsubmit="return check()">
         {% csrf_token %}
         A<br>
         {%for vote in votes.all %}
@@ -33,7 +38,7 @@
         {%endif%}
         {%endfor%}
         <br>
-        <input type="submit" value="home">
+        <input type="submit" value="적용하기">
     </form>
     
 </body>
